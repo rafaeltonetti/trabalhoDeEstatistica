@@ -1,0 +1,33 @@
+body {
+    background: #222222;
+    margin: 0;
+}
+
+.content {
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #555555;
+    border: 10px;
+    color: white;
+    border-radius: 30px;
+}
+
+input {
+    width: 40%;
+}
+
+#btn, #btn2 {
+    width: 50%;
+}
+
+#calcula {
+    width: 100%;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-between;
+}
