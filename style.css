@@ -20,14 +20,34 @@ input {
 }
 
 #btn, #btn2 {
-    width: 50%;
+    width: 49.5%;
+}
+
+#btn {
+    margin-right: 1%;
 }
 
 #calcula {
     width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
 }
 
 .botoes {
+    margin-top: 1rem;
     display: flex;
-    justify-content: space-between;
+}
+
+.resultados {
+    width: 50%;
+    text-align: right;
+}
+
+.res-container {
+    position: relative;
+    left: 10.5%;
+}
+
+.tabela {
+    margin-right: -3.2rem;
 }
