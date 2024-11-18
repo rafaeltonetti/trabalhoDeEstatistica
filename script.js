@@ -3,22 +3,239 @@ btn2.addEventListener('click', completaFiXi);
 calcula.addEventListener('click', calcular);
 
 function completa() {
-    if (li1.value === "" || ls1.value === ""){
-        alert("É preciso preencher ao menos os limites inferior e superior da primeira classe!");
+    if (li1.value !== "" && ls1.value !== ""){
+        var amp = amplitude(parseFloat(li1.value), parseFloat(ls1.value), 1);
+        var limInferior1 = parseFloat(li1.value);
+        var limSuperior1 = parseFloat(li1.value) + amp;
+    } else if (li1.value !== "" && ls2.value !== ""){
+        var amp = amplitude(parseFloat(li1.value), parseFloat(ls2.value), 2);
+        var limInferior1 = parseFloat(li1.value);
+        var limSuperior1 = parseFloat(li1.value) + amp;
+    } else if (li1.value !== "" && ls3.value !== ""){
+        var amp = amplitude(parseFloat(li1.value), parseFloat(ls3.value), 3);
+        var limInferior1 = parseFloat(li1.value);
+        var limSuperior1 = parseFloat(li1.value) + amp;
+    } else if (li1.value !== "" && ls4.value !== ""){
+        var amp = amplitude(parseFloat(li1.value), parseFloat(ls4.value), 4);
+        var limInferior1 = parseFloat(li1.value);
+        var limSuperior1 = parseFloat(li1.value) + amp;
+    } else if (li1.value !== "" && ls5.value !== ""){
+        var amp = amplitude(parseFloat(li1.value), parseFloat(ls5.value), 5);
+        var limInferior1 = parseFloat(li1.value);
+        var limSuperior1 = parseFloat(li1.value) + amp;
+    } else if (li2.value !== "" && ls2.value !== "") {
+        var amp = amplitude(parseFloat(li2.value), parseFloat(ls2.value), 1);
+        var limInferior1 = parseFloat(li2.value) - amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li2.value !== "" && ls3.value !== "") {
+        var amp = amplitude(parseFloat(li2.value), parseFloat(ls3.value), 2);
+        var limInferior1 = parseFloat(li2.value) - amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li2.value !== "" && ls4.value !== "") {
+        var amp = amplitude(parseFloat(li2.value), parseFloat(ls4.value), 3);
+        var limInferior1 = parseFloat(li2.value) - amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li2.value !== "" && ls5.value !== "") {
+        var amp = amplitude(parseFloat(li2.value), parseFloat(ls5.value), 4);
+        var limInferior1 = parseFloat(li2.value) - amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li3.value !== "" && ls1.value !== "") {
+        var amp = amplitude(parseFloat(li3.value), parseFloat(ls1.value), 1);
+        var limInferior1 = parseFloat(li3.value) - (2 * amp);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li3.value !== "" && ls3.value !== "") {
+        var amp = amplitude(parseFloat(li3.value), parseFloat(ls3.value), 1);
+        var limInferior1 = parseFloat(li3.value) - (2 * amp);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li3.value !== "" && ls4.value !== "") {
+        var amp = amplitude(parseFloat(li3.value), parseFloat(ls4.value), 2);
+        var limInferior1 = parseFloat(li3.value) - (2 * amp);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li3.value !== "" && ls5.value !== "") {
+        var amp = amplitude(parseFloat(li3.value), parseFloat(ls5.value), 3);
+        var limInferior1 = parseFloat(li3.value) - (2 * amp);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li4.value !== "" && ls1.value !== ""){
+        var amp = amplitude(parseFloat(li4.value), parseFloat(ls1.value), 2);
+        var limInferior1 = parseFloat(li4.value) - (3 * amp);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li4.value !== "" && ls2.value !== ""){
+        var amp = amplitude(parseFloat(li4.value), parseFloat(ls2.value), 1);
+        var limInferior1 = parseFloat(li4.value) - (3 * amp);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li4.value !== "" && ls4.value !== ""){
+        var amp = amplitude(parseFloat(li4.value), parseFloat(ls4.value), 1);
+        var limInferior1 = parseFloat(li4.value) - (3 * amp);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li4.value !== "" && ls5.value !== ""){
+        var amp = amplitude(parseFloat(li4.value), parseFloat(ls5.value), 2);
+        var limInferior1 = parseFloat(li4.value) - (3 * amp);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li5.value !== "" && ls1.value !== ""){
+        var amp = amplitude(parseFloat(li5.value), parseFloat(ls1.value), 3);
+        var limInferior1 = parseFloat(li5.value) - (4 * amp);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li5.value !== "" && ls2.value !== ""){
+        var amp = amplitude(parseFloat(li5.value), parseFloat(ls2.value), 2);
+        var limInferior1 = parseFloat(li5.value) - (4 * amp);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li5.value !== "" && ls3.value !== ""){
+        var amp = amplitude(parseFloat(li5.value), parseFloat(ls3.value), 1);
+        var limInferior1 = parseFloat(li5.value) - (4 * amp);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li5.value !== "" && ls5.value !== ""){
+        var amp = amplitude(parseFloat(li5.value), parseFloat(ls5.value), 1);
+        var limInferior1 = parseFloat(li5.value) - (4 * amp);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li1.value !== "" && li2.value !== "") {
+        var amp = amplitude(parseFloat(li1.value), parseFloat(li2.value), 1);
+        var limInferior1 = parseFloat(li1.value);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li1.value !== "" && li3.value !== "") {
+        var amp = amplitude(parseFloat(li1.value), parseFloat(li3.value), 2);
+        var limInferior1 = parseFloat(li1.value);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li1.value !== "" && li4.value !== "") {
+        var amp = amplitude(parseFloat(li1.value), parseFloat(li4.value), 3);
+        var limInferior1 = parseFloat(li1.value);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li1.value !== "" && li5.value !== "") {
+        var amp = amplitude(parseFloat(li1.value), parseFloat(li5.value), 4);
+        var limInferior1 = parseFloat(li1.value);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li2.value !== "" && li3.value !== "") {
+        var amp = amplitude(parseFloat(li2.value), parseFloat(li3.value), 1);
+        var limInferior1 = parseFloat(li2.value) - amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li2.value !== "" && li4.value !== "") {
+        var amp = amplitude(parseFloat(li2.value), parseFloat(li4.value), 2);
+        var limInferior1 = parseFloat(li2.value) - amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li2.value !== "" && li5.value !== "") {
+        var amp = amplitude(parseFloat(li2.value), parseFloat(li5.value), 3);
+        var limInferior1 = parseFloat(li2.value) - amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li3.value !== "" && li4.value !== "") {
+        var amp = amplitude(parseFloat(li3.value), parseFloat(li4.value), 1);
+        var limInferior1 = parseFloat(li3.value) - 2 * amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li3.value !== "" && li5.value !== "") {
+        var amp = amplitude(parseFloat(li3.value), parseFloat(li5.value), 2);
+        var limInferior1 = parseFloat(li3.value) - 2 * amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (li4.value !== "" && li5.value !== "") {
+        var amp = amplitude(parseFloat(li4.value), parseFloat(li5.value), 1);
+        var limInferior1 = parseFloat(li4.value) - 3 * amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (ls1.value !== "" && ls2.value !== "") {
+        var amp = amplitude(parseFloat(ls1.value), parseFloat(ls2.value), 1);
+        var limInferior1 = parseFloat(ls1.value) - amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (ls1.value !== "" && ls3.value !== "") {
+        var amp = amplitude(parseFloat(ls1.value), parseFloat(ls3.value), 2);
+        var limInferior1 = parseFloat(ls1.value) - amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (ls1.value !== "" && ls4.value !== "") {
+        var amp = amplitude(parseFloat(ls1.value), parseFloat(ls4.value), 3);
+        var limInferior1 = parseFloat(ls1.value) - amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (ls1.value !== "" && ls5.value !== "") {
+        var amp = amplitude(parseFloat(ls1.value), parseFloat(ls5.value), 4);
+        var limInferior1 = parseFloat(ls1.value) - amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (ls2.value !== "" && ls3.value !== "") {
+        var amp = amplitude(parseFloat(ls2.value), parseFloat(ls3.value), 1);
+        var limInferior1 = parseFloat(ls1.value) - 2 * amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (ls2.value !== "" && ls4.value !== "") {
+        var amp = amplitude(parseFloat(ls2.value), parseFloat(ls4.value), 2);
+        var limInferior1 = parseFloat(ls1.value) - 2 * amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (ls2.value !== "" && ls5.value !== "") {
+        var amp = amplitude(parseFloat(ls2.value), parseFloat(ls5.value), 3);
+        var limInferior1 = parseFloat(ls1.value) - 2 * amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (ls3.value !== "" && ls4.value !== "") {
+        var amp = amplitude(parseFloat(ls3.value), parseFloat(ls4.value), 1);
+        var limInferior1 = parseFloat(ls3.value) - 3 * amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (ls3.value !== "" && ls5.value !== "") {
+        var amp = amplitude(parseFloat(ls3.value), parseFloat(ls5.value), 2);
+        var limInferior1 = parseFloat(ls3.value) - 3 * amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (ls4.value !== "" && ls5.value !== "") {
+        var amp = amplitude(parseFloat(ls4.value), parseFloat(ls5.value), 1);
+        var limInferior1 = parseFloat(ls3.value) - 4 * amp;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (pmi1.value !== "" && pmi2.value !== ""){
+        var amp = amplitude(parseFloat(pmi1.value), parseFloat(pmi2.value), 1);
+        var limInferior1 = parseFloat(pmi1.value) - amp / 2;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (pmi1.value !== "" && pmi3.value !== ""){
+        var amp = amplitude(parseFloat(pmi1.value), parseFloat(pmi3.value), 2);
+        var limInferior1 = parseFloat(pmi1.value) - amp / 2;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (pmi1.value !== "" && pmi4.value !== ""){
+        var amp = amplitude(parseFloat(pmi1.value), parseFloat(pmi4.value), 3);
+        var limInferior1 = parseFloat(pmi1.value) - amp / 2;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (pmi1.value !== "" && pmi5.value !== ""){
+        var amp = amplitude(parseFloat(pmi1.value), parseFloat(pmi5.value), 4);
+        var limInferior1 = parseFloat(pmi1.value) - amp / 2;
+        var limSuperior1 = limInferior1 + amp;
+    } else if (pmi2.value !== "" && pmi3.value !== ""){
+        var amp = amplitude(parseFloat(pmi2.value), parseFloat(pmi3.value), 1);
+        var limInferior1 = parseFloat(pmi2.value) - (1 + amp / 2);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (pmi2.value !== "" && pmi4.value !== ""){
+        var amp = amplitude(parseFloat(pmi2.value), parseFloat(pmi4.value), 2);
+        var limInferior1 = parseFloat(pmi2.value) - (1 + amp / 2);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (pmi2.value !== "" && pmi5.value !== ""){
+        var amp = amplitude(parseFloat(pmi2.value), parseFloat(pmi5.value), 3);
+        var limInferior1 = parseFloat(pmi2.value) - (1 + amp / 2);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (pmi3.value !== "" && pmi4.value !== ""){
+        var amp = amplitude(parseFloat(pmi3.value), parseFloat(pmi4.value), 1);
+        var limInferior1 = parseFloat(pmi3.value) - (2 + amp / 2);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (pmi3.value !== "" && pmi5.value !== ""){
+        var amp = amplitude(parseFloat(pmi3.value), parseFloat(pmi5.value), 2);
+        var limInferior1 = parseFloat(pmi3.value) - (2 + amp / 2);
+        var limSuperior1 = limInferior1 + amp;
+    } else if (pmi4.value !== "" && pmi5.value !== ""){
+        var amp = amplitude(parseFloat(pmi4.value), parseFloat(pmi5.value), 1);
+        var limInferior1 = parseFloat(pmi4.value) - (3 + amp / 2);
+        var limSuperior1 = limInferior1 + amp;
     } else {
-        var limi1 = parseFloat(li1.value);
-        var lims1 = parseFloat(ls1.value);
-        var h = lims1 - limi1;
-
-        li2.value = lims1;
-        ls2.value = (lims1 + h);
-        li3.value = parseFloat(ls2.value);
-        ls3.value = parseFloat(li3.value) + h;
-        li4.value = parseFloat(ls3.value);
-        ls4.value = parseFloat(li4.value) + h;
-        li5.value = parseFloat(ls4.value);
-        ls5.value = parseFloat(li5.value) + h;
+        alert("Não foi possível completar. Os dados foram preenchidos incorretamente");
     }
+
+    li1.value = arredonda(limInferior1, 4);
+    ls1.value = arredonda(limSuperior1, 4);
+    li2.value = arredonda(limSuperior1, 4);
+    ls2.value = arredonda(parseFloat(li2.value) + amp, 4);
+    li3.value = arredonda(parseFloat(ls2.value), 4);
+    ls3.value = arredonda(parseFloat(li3.value) + amp, 4);
+    li4.value = arredonda(parseFloat(ls3.value), 4);
+    ls4.value = arredonda(parseFloat(li4.value) + amp, 4);
+    li5.value = arredonda(parseFloat(ls4.value), 4);
+    ls5.value = arredonda(parseFloat(li5.value) + amp, 4);
+    pmi1.value = arredonda((limInferior1 + limSuperior1) / 2, 4);
+    pmi2.value = arredonda(parseFloat(pmi1.value) + amp, 4);
+    pmi3.value = arredonda(parseFloat(pmi2.value) + amp, 4);
+    pmi4.value = arredonda(parseFloat(pmi3.value) + amp, 4);
+    pmi5.value = arredonda(parseFloat(pmi4.value) + amp, 4);
+}
+
+function arredonda(n, d) {
+    var num = n;
+    num = num.toFixed(d);
+    return num;
+}
+
+function amplitude(n1, n2, dist) {
+    return Math.abs(n2 - n1) / dist;
 }
 
 function completaFiXi() {
@@ -178,11 +395,11 @@ function calcular(){
     console.log('Array Fis: ' + fis);
     console.log('Array pmis: ' + pmis);
 
-    mediaRes.value = media(pmis);
-    medianaRes.value = mediana(fis, pmis);
-    modaBrutaRes.value = modaBruta(fis, pmis);
-    modaCzuberRes.value = modaCzuber(limitesInf, fis);
-    varianciaRes.value = variancia(pmis, fis, facs, media(pmis));
-    dpRes.value = desvioPadrao(variancia(pmis, fis, facs, media(pmis)));
-    cvRes.value = coeficienteVariacao(desvioPadrao(variancia(pmis, fis, facs, media(pmis))), media(pmis));
+    mediaRes.value = arredonda(media(pmis), 4);
+    medianaRes.value = arredonda(mediana(fis, pmis), 4);
+    modaBrutaRes.value = arredonda(modaBruta(fis, pmis), 4);
+    modaCzuberRes.value = arredonda(modaCzuber(limitesInf, fis), 4);
+    varianciaRes.value = arredonda(variancia(pmis, fis, facs, media(pmis)), 4);
+    dpRes.value = arredonda(desvioPadrao(variancia(pmis, fis, facs, media(pmis))), 4);
+    cvRes.value = arredonda(coeficienteVariacao(desvioPadrao(variancia(pmis, fis, facs, media(pmis))), media(pmis)), 4);
 }
